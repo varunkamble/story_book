@@ -1,14 +1,6 @@
 
-# coding: utf-8
-
-# In[1]:
-
-
 import serial
 import time
-
-
-RECIPIENT = "+917045469323"
 
 phone = serial.Serial("/dev/ttyUSB0",  9600, timeout = 5)
 
@@ -26,7 +18,7 @@ try:
     time.sleep(0.2)
     print(phone.read(256))
 
-    phone.write(b'AT+CMGS="+919022057698"\r')
+    phone.write(b'AT+CMGS="+91xxxxxxxxxx"\r')
     time.sleep(0.2)
     phone.write(b'Hii KK\r')
     time.sleep(0.2)
