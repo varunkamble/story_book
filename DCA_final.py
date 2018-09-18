@@ -36,7 +36,7 @@ for i in range(len(traffic_channels)):
 
 # Printing the channels as per priority
 print("The high priority channels are: ", channels_group_as_per_priority[0])
-print("The high priority channels are: ", channels_group_as_per_priority[1])
+print("The low priority channels are: ", channels_group_as_per_priority[1])
 
 # Take input of call request
 channel_request = []
@@ -82,7 +82,7 @@ i = 0
 while(i < len(channels_group_as_per_priority[1])):
 	if(cell_no>=cluster_size):
 		cell_no=0
-	if(len(alloted_traffic_channels[cell_no][1])<hp_channels_to_be_alloted_per_cell[cell_no]):
+	if(len(alloted_traffic_channels[cell_no][1])<lp_channels_to_be_alloted_per_cell[cell_no]):
 		alloted_traffic_channels[cell_no][1].append(channels_group_as_per_priority[1][i])
 		i += 1
 	cell_no += 1
