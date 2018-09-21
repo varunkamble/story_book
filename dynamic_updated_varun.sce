@@ -89,16 +89,16 @@ for i = 1:clust
     disp(low_alloc);
     
     for k = 1:high_alloc
-        //if indh < count_high then
+        if indh < count_high then
             printf("high %d:%d, ", high_index(indh),high_priority(indh));
             indh = indh + 1;
-        //end
+        end
     end
 
     for j = 1:low_alloc
-        //if indl < count_low then
+        if indl < count_low then
             printf("low %d:%d, ", low_index(indl),low_priority(indl));
             indl = indl + 1;
-        //end
+        end
     end
 end
